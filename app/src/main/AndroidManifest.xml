@@ -20,6 +20,7 @@
 
         <activity android:name=".splashscreen.SplashScreenActivity"
             android:screenOrientation="fullSensor"
+            android:theme="@style/FullScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
