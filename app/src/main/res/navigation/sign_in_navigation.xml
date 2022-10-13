@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sign_in_navigation"
+    app:startDestination="@+id/signin_fragment">
+
+    <fragment android:id="@+id/signin_fragment"
+        android:name="com.example.studentattendanceproject.fragment.signinsiginup.SignInFragment">
+        <action
+            android:id="@+id/action_singin_fragment_to_sign_up_fragment"
+            app:destination="@id/sign_up_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment android:id="@+id/sign_up_fragment"
+        android:name="com.example.studentattendanceproject.fragment.signinsiginup.SignUpFragment">
+        <action
+            android:id="@+id/action_sign_up_fragment_to_singin_fragment"
+            app:destination="@id/signin_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+</navigation>
