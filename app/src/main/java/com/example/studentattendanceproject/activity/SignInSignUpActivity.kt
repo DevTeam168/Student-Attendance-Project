@@ -12,5 +12,6 @@ class SignInSignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in_sign_up)
+
     }
 }
