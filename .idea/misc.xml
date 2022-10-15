@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Document/Git/Project1/Student-Attendance-Project/app/src/main/res/drawable/ic_group_686.xml" value="0.1265" />
+        <entry key="..\:/Document/Git/Project1/Student-Attendance-Project/app/src/main/res/drawable/bg_signin_button.xml" value="0.1265" />
+        <entry key="..\:/Document/Git/Project1/Student-Attendance-Project/app/src/main/res/drawable/ic_group_686.xml" value="0.16666666666666666" />
         <entry key="..\:/Document/Git/Project1/Student-Attendance-Project/app/src/main/res/layout/activity_main.xml" value="0.6666666666666666" />
         <entry key="..\:/Document/Git/Project1/Student-Attendance-Project/app/src/main/res/layout/activity_sign_in_sign_up.xml" value="0.17552083333333332" />
         <entry key="..\:/Document/Git/Project1/Student-Attendance-Project/app/src/main/res/layout/fragment_sign_in.xml" value="0.3333333333333333" />
