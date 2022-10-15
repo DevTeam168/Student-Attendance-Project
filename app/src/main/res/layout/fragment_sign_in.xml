@@ -84,7 +84,6 @@
             app:neumorph_strokeColor="@color/white"
             app:neumorph_strokeWidth="@dimen/dp_1_5"
             android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,6 +153,7 @@
             app:layout_constraintStart_toEndOf="@+id/tv_remember_me"
             app:layout_constraintTop_toBottomOf="@+id/tv_remember_me"/>
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sign_in"
             android:layout_width="0dp"
@@ -175,7 +175,8 @@
             android:id="@+id/v_line_left"
             android:layout_width="155dp"
             android:layout_height="2dp"
-            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_or"
             android:background="@color/text_color_black"
             app:layout_constraintStart_toStartOf="@+id/btn_sign_in"
             app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"/>
@@ -186,10 +187,11 @@
             android:layout_height="wrap_content"
             android:text="@string/or"
             android:textSize="@dimen/sp_16"
-            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginTop="13dp"
             android:layout_marginStart="@dimen/dp_10"
             android:fontFamily="@font/poppins_medium"
             android:textColor="@color/text_color_black"
+            app:layout_constraintEnd_toStartOf="@+id/v_line_right"
             app:layout_constraintStart_toEndOf="@+id/v_line_left"
             app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"/>
 
@@ -198,11 +200,66 @@
             android:layout_width="155dp"
             android:layout_height="2dp"
             android:layout_marginStart="@dimen/dp_10"
-            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginTop="12dp"
             android:background="@color/text_color_black"
             app:layout_constraintEnd_toEndOf="@+id/btn_sign_in"
             app:layout_constraintStart_toEndOf="@+id/tv_or"
             app:layout_constraintTop_toTopOf="@+id/tv_or" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cdView_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_strokeColor="@color/white"
+            app:neumorph_strokeWidth="@dimen/dp_1_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_133"
+            app:layout_constraintEnd_toStartOf="@+id/cdView_google"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_line_right"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius11">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook"
+                tools:ignore="ContentDescription" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cdView_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_strokeColor="@color/white"
+            app:neumorph_strokeWidth="@dimen/dp_1_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_133"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cdView_facebook"
+            app:layout_constraintTop_toBottomOf="@+id/v_line_right"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius11">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_google"
+                tools:ignore="ContentDescription" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:id="@+id/tv_bottom_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_2"
+            android:fontFamily="@font/poppins_medium"
+            android:textColorLink="@color/pink"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -24,6 +24,27 @@
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="ContentDescription" />
 
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cd_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:neumorph_strokeWidth="@dimen/dp_1_5"
+            app:neumorph_strokeColor="@color/white"
+            app:neumorph_shadowElevation="@dimen/dp_1_5"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_back" />
+        </soup.neumorphism.NeumorphCardView>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -128,7 +149,7 @@
                 android:src="@drawable/ic_hide"
                 tools:ignore="ContentDescription"
                 android:layout_gravity="end|center"
-                android:layout_marginEnd="@dimen/dp_16"/>
+                android:layout_marginEnd="@dimen/dp_16" />
         </soup.neumorphism.NeumorphCardView>
 
         <soup.neumorphism.NeumorphCardView
@@ -165,7 +186,7 @@
                 android:src="@drawable/ic_hide"
                 tools:ignore="ContentDescription"
                 android:layout_gravity="end|center"
-                android:layout_marginEnd="@dimen/dp_16"/>
+                android:layout_marginEnd="@dimen/dp_16" />
         </soup.neumorphism.NeumorphCardView>
 
         <com.google.android.material.button.MaterialButton
@@ -178,7 +199,7 @@
             app:cornerRadius="@dimen/dp_16"
             app:strokeWidth="@dimen/dp_1_5"
             app:strokeColor="@color/white"
-            android:layout_marginHorizontal="@dimen/dp_16"/>
+            android:layout_marginHorizontal="@dimen/dp_16" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
