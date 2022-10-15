@@ -7,9 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
+import androidx.core.view.children
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.databinding.FragmentSignUpBinding
+import com.example.studentattendanceproject.util.Util
+import soup.neumorphism.NeumorphCardView
 
 class SignUpFragment : Fragment() {
 
@@ -20,18 +26,31 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_sign_up, container, false)
+        return mBinding?.root
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mBinding?.apply {
-            cdBack.setOnTouchListener { view, motionEvent ->
-                Log.d("click", "click")
+            cdBack.setOnClickListener {
                 findNavController().popBackStack()
-                false
+            }
+            activity?.let { it1->
+                imageView.setOnClickListener {
+                    Util().hideKeyboard(it1, view)
+                    cslContainer.children.forEach { it1 ->
+                        if (it1 is NeumorphCardView) {
+                            it1.children.forEach {
+                                if (it is EditText) {
+                                    it.clearFocus()
+                                }
+                            }
 
+                        }
+                    }
+
+                }
             }
         }
     }
