@@ -141,6 +141,7 @@
             app:layout_constraintTop_toTopOf="@+id/imgView_checkbox_remember_me"/>
 
         <TextView
+            android:id="@+id/tv_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot_password"
@@ -152,6 +153,56 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_remember_me"
             app:layout_constraintTop_toBottomOf="@+id/tv_remember_me"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/sign_in"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password"
+            app:cornerRadius="@dimen/dp_16"
+            app:strokeWidth="@dimen/dp_1_5"
+            app:strokeColor="@color/white"
+            android:layout_marginHorizontal="@dimen/dp_16"/>
+
+        <View
+            android:id="@+id/v_line_left"
+            android:layout_width="155dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/text_color_black"
+            app:layout_constraintStart_toStartOf="@+id/btn_sign_in"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"/>
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/text_color_black"
+            app:layout_constraintStart_toEndOf="@+id/v_line_left"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"/>
+
+        <View
+            android:id="@+id/v_line_right"
+            android:layout_width="155dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/text_color_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_sign_in"
+            app:layout_constraintStart_toEndOf="@+id/tv_or"
+            app:layout_constraintTop_toTopOf="@+id/tv_or" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
