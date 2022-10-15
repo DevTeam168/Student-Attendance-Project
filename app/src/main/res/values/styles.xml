@@ -11,4 +11,11 @@
         <item name="neumorph_cornerSizeBottomLeft">16dp</item>
         <item name="neumorph_cornerSizeBottomRight">16dp</item> -->
     </style>
+
+    <style name="CustomShapeAppearanceRadius5">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">5dp</item>
+    </style>
+
+
 </resources>
