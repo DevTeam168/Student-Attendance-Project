@@ -79,7 +79,7 @@
                     app:neumorph_strokeWidth="@dimen/dp_1_5">
 
                     <EditText
-                        android:id="@+id/txtView_email"
+                        android:id="@+id/et_email"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -107,7 +107,7 @@
                     app:neumorph_strokeWidth="@dimen/dp_1_5">
 
                     <EditText
-                        android:id="@+id/txtView_password"
+                        android:id="@+id/et_password"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -120,23 +120,28 @@
                         android:textSize="@dimen/sp_16"
                         tools:ignore="Autofill" />
 
-                    <ImageView
-                        android:id="@+id/imgView_eye_toggle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <CheckBox
+                        android:id="@+id/check_box_eye_toggle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_gravity="end|center"
                         android:layout_marginEnd="@dimen/dp_16"
+                        android:button="@null"
+                        android:checked="true"
+                        android:background="@drawable/eye_password_toggle_selector"
                         android:src="@drawable/ic_hide"
                         tools:ignore="ContentDescription" />
                 </soup.neumorphism.NeumorphCardView>
 
-                <ImageView
+                <CheckBox
                     android:id="@+id/imgView_checkbox_remember_me"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
                     android:layout_marginStart="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_5"
-                    android:src="@drawable/check_box_selector"
+                    android:checked="false"
+                    android:background="@drawable/check_box_selector"
+                    android:button="@null"
                     app:layout_constraintStart_toStartOf="@+id/cdView_password"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_password"
                     tools:ignore="ContentDescription" />
