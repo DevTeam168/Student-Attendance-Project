@@ -11,13 +11,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.EditText
 import androidx.core.content.ContextCompat
+import androidx.core.view.children
+import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.databinding.FragmentSignInBinding
 import com.example.studentattendanceproject.helper.ClearFocus
 import com.example.studentattendanceproject.util.Util
+import soup.neumorphism.NeumorphCardView
+import soup.neumorphism.ShapeType
 
 class SignInFragment : Fragment() {
     private var mBinding: FragmentSignInBinding? = null
@@ -54,16 +59,27 @@ class SignInFragment : Fragment() {
     private fun initListener() {
         mBinding?.imageView?.setOnClickListener {
             //hide keyboard layout
-            Util().hideKeyboard(requireActivity(),it)
+            Util.hideKeyboard(requireActivity(),it)
             //clear all focus from editText
-            ClearFocus.clearTextView(mBinding?.cslContainer)
+            Util.clearEditText(mBinding?.cslContainer)
+        }
+        mBinding?.cslContainer?.children?.forEach {
+            if(it is NeumorphCardView){
+                it.children.forEach { it1 ->
+                    if(it1 is EditText){
+                        if(it1.isFocused){
+                            Util.onFocusChange(it1,it)
+                        }
+                    }
+                }
+            }
         }
     }
 
     private fun initialize() {
         setColorToBottomMessage()
         //to make layout is scrollable when showing the keyboard
-        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+       // activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
     }
 
     private fun setColorToBottomMessage(){

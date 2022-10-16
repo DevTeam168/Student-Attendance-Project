@@ -47,8 +47,9 @@ class SignUpFragment : Fragment() {
             }
             activity?.let { it1 ->
                 imageView.setOnClickListener {
-                    Util().hideKeyboard(it1, view)
+                    Util.hideKeyboard(it1, view)
                     ClearFocus.clearTextView(cslContainer)
+
                 }
             }
 
@@ -56,7 +57,9 @@ class SignUpFragment : Fragment() {
                 if (it1 is NeumorphCardView) {
                     it1.children.forEach {
                         if (it is EditText) {
-                            onFocusChange(it, it1)
+                            if(it.isFocused){
+                                Util.onFocusChange(it, it1)
+                            }
                         }
                     }
                 }
@@ -115,19 +118,4 @@ class SignUpFragment : Fragment() {
             })*/
         }
     }
-
-    private fun onFocusChange(view: EditText, cardView: NeumorphCardView) {
-        view.setOnFocusChangeListener { _, b ->
-            if (b) {
-                cardView.setShapeType(ShapeType.PRESSED)
-            } else {
-                if (view.text.isEmpty()) {
-                   cardView.setShapeType(ShapeType.FLAT)
-               }
-            }
-        }
-
-    }
-
-
 }
