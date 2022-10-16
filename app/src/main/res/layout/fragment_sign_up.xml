@@ -74,10 +74,13 @@
                         android:fontFamily="@font/poppins_regular"
                         android:hint="@string/username"
                         android:imeOptions="actionNext"
+                        android:textColorHint="@color/text_color_black"
                         android:inputType="textEmailAddress"
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
+                        android:theme="@style/CursorPointer"
+                        android:textCursorDrawable="@drawable/cusor_color"
                         tools:ignore="Autofill" />
                 </soup.neumorphism.NeumorphCardView>
 

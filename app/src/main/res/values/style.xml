@@ -5,4 +5,8 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
+    
+    <style name="CursorPointer" parent="TextAppearance.AppCompat">
+        <item name="colorControlActivated">@color/text_color_black</item>
+    </style>
 </resources>
