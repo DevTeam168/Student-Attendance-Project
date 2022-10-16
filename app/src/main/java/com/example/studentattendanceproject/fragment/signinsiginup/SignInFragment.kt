@@ -55,14 +55,11 @@ class SignInFragment : Fragment() {
     }
 
     private fun initListener() {
-        activity?.let {
-            mBinding?.imageView?.setOnClickListener {
-                //hide keyboard layout
-                Util().hideKeyboard(requireActivity(),it)
-                //clear all focus from editText
-                ClearFocus.clearTextView(mBinding?.cslContainer)
-
-            }
+        mBinding?.imageView?.setOnClickListener {
+            //hide keyboard layout
+            Util().hideKeyboard(requireActivity(),it)
+            //clear all focus from editText
+            ClearFocus.clearTextView(mBinding?.cslContainer)
         }
     }
 
