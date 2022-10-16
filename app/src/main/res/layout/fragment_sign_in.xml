@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_5"
-                    android:src="@drawable/ic_untik"
+                    android:src="@drawable/check_box_selector"
                     app:layout_constraintStart_toStartOf="@+id/cdView_password"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_password"
                     tools:ignore="ContentDescription" />

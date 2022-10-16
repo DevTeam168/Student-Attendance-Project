@@ -11,16 +11,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.EditText
 import androidx.core.content.ContextCompat
-import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.databinding.FragmentSignInBinding
 import com.example.studentattendanceproject.helper.ClearFocus
 import com.example.studentattendanceproject.util.Util
-import soup.neumorphism.NeumorphCardView
 
 class SignInFragment : Fragment() {
     private var mBinding: FragmentSignInBinding? = null
