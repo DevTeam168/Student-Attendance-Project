@@ -16,7 +16,7 @@
         <activity
             android:name=".activity.SignInSignUpActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="sensorPortrait"/>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
