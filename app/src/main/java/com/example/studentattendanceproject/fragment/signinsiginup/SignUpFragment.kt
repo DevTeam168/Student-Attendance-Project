@@ -17,6 +17,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.databinding.FragmentSignUpBinding
+import com.example.studentattendanceproject.helper.ClearFocus
 import com.example.studentattendanceproject.util.Util
 import kotlinx.coroutines.runBlocking
 import soup.neumorphism.NeumorphCardView
@@ -47,17 +48,7 @@ class SignUpFragment : Fragment() {
             activity?.let { it1 ->
                 imageView.setOnClickListener {
                     Util().hideKeyboard(it1, view)
-                    cslContainer.children.forEach { it1 ->
-                        if (it1 is NeumorphCardView) {
-                            it1.children.forEach {
-                                if (it is EditText) {
-                                    it.clearFocus()
-                                }
-                            }
-
-                        }
-                    }
-
+                    ClearFocus.clearTextView(cslContainer)
                 }
             }
 
