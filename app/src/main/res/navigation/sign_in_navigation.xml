@@ -9,6 +9,10 @@
         <action
             android:id="@+id/action_singin_fragment_to_sign_up_fragment"
             app:destination="@id/sign_up_fragment" />
+        <action
+            android:id="@+id/action_signin_fragment_to_forgot_password_fragment"
+            app:destination="@id/forgot_password_fragment"
+            app:enterAnim="@android:anim/fade_in"/>
     </fragment>
 
     <fragment android:id="@+id/sign_up_fragment"
@@ -16,6 +20,14 @@
         <action
             android:id="@+id/action_sign_up_fragment_to_singin_fragment"
             app:destination="@id/signin_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/forgot_password_fragment"
+        android:name="com.example.studentattendanceproject.fragment.forgotpassword.ForgotPasswordFragment">
+        <action
+            android:id="@+id/action_forgot_password_fragment_to_signin_fragment"
+            app:destination="@id/signin_fragment"
+            app:exitAnim="@android:anim/fade_out"/>
     </fragment>
 
 </navigation>

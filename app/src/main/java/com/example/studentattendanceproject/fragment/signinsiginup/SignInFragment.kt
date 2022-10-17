@@ -26,6 +26,8 @@ import soup.neumorphism.ShapeType
 
 class SignInFragment : Fragment() {
     private var mBinding: FragmentSignInBinding? = null
+
+    //click on Sign Up text at the bottom
     private val clickableSpan = object : ClickableSpan(){
         override fun onClick(p0: View) {
             findNavController().navigate(R.id.sign_up_fragment)
@@ -44,7 +46,6 @@ class SignInFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         mBinding = FragmentSignInBinding.inflate(inflater, container, false)
-
         return mBinding?.root
     }
 
@@ -63,16 +64,19 @@ class SignInFragment : Fragment() {
             //clear all focus from editText
             Util.clearEditText(mBinding?.cslContainer)
         }
+
         mBinding?.cslContainer?.children?.forEach {
             if(it is NeumorphCardView){
                 it.children.forEach { it1 ->
                     if(it1 is EditText){
-                        if(it1.isFocused){
-                            Util.onFocusChange(it1,it)
-                        }
+                        Util.onFocusChange(it1,it)
                     }
                 }
             }
+        }
+
+        mBinding?.tvForgotPassword?.setOnClickListener {
+            findNavController().navigate(R.id.action_signin_fragment_to_forgot_password_fragment)
         }
     }
 

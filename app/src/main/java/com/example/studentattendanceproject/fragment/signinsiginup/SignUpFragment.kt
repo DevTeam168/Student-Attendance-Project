@@ -57,9 +57,7 @@ class SignUpFragment : Fragment() {
                 if (it1 is NeumorphCardView) {
                     it1.children.forEach {
                         if (it is EditText) {
-                            if(it.isFocused){
-                                Util.onFocusChange(it, it1)
-                            }
+                            Util.onFocusChange(it, it1)
                         }
                     }
                 }

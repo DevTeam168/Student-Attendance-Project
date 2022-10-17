@@ -17,4 +17,8 @@
     <string name="or">OR</string>
     <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="forgot_password_">Forgot Password</string>
+    <string name="please_enter_the_phone_number_855_42_associated_with_your_account">Please enter the phone number +855 ********42 associated with your account.</string>
+    <string name="_855">+855</string>
+    <string name="next">Next</string>
 </resources>
