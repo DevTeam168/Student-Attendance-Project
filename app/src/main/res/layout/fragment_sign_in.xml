@@ -13,6 +13,7 @@
         android:background="@color/light_grayish_blue">
 
         <androidx.core.widget.NestedScrollView
+            android:id="@+id/nstScroll_sign_in"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
