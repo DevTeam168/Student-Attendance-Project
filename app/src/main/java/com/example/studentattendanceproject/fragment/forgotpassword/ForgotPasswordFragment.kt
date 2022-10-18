@@ -52,5 +52,9 @@ class ForgotPasswordFragment : Fragment() {
             }
         }
 
+        mBinding?.btnNext?.setOnClickListener {
+            findNavController().navigate(R.id.otp_verification_fragment)
+        }
+
     }
 }
