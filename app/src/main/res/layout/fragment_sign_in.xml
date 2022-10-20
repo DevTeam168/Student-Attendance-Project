@@ -68,6 +68,8 @@
                 <soup.neumorphism.NeumorphCardView
                     android:id="@+id/cdView_email"
                     android:layout_width="0dp"
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     android:layout_height="@dimen/input_field_height"
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginTop="@dimen/dp_20"
@@ -91,12 +93,15 @@
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
-                        tools:ignore="Autofill" />
+                        tools:ignore="Autofill,TextContrastCheck" />
                 </soup.neumorphism.NeumorphCardView>
 
                 <soup.neumorphism.NeumorphCardView
                     android:id="@+id/cdView_password"
                     android:layout_width="0dp"
+
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     android:layout_height="@dimen/input_field_height"
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginEnd="@dimen/dp_16"
@@ -119,7 +124,7 @@
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
-                        tools:ignore="Autofill" />
+                        tools:ignore="Autofill,TextContrastCheck" />
 
                     <CheckBox
                         android:id="@+id/check_box_eye_toggle"
@@ -127,11 +132,11 @@
                         android:layout_height="24dp"
                         android:layout_gravity="end|center"
                         android:layout_marginEnd="@dimen/dp_16"
+                        android:background="@drawable/eye_password_toggle_selector"
                         android:button="@null"
                         android:checked="true"
-                        android:background="@drawable/eye_password_toggle_selector"
                         android:src="@drawable/ic_hide"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,TouchTargetSizeCheck" />
                 </soup.neumorphism.NeumorphCardView>
 
                 <CheckBox
@@ -140,12 +145,12 @@
                     android:layout_height="@dimen/dp_20"
                     android:layout_marginStart="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_5"
-                    android:checked="false"
                     android:background="@drawable/check_box_selector"
                     android:button="@null"
+                    android:checked="false"
                     app:layout_constraintStart_toStartOf="@+id/cdView_password"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_password"
-                    tools:ignore="ContentDescription" />
+                    tools:ignore="ContentDescription,TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/tv_remember_me"
@@ -191,7 +196,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password"
                     app:strokeColor="@color/white"
-                    app:strokeWidth="@dimen/dp_1_5" />
+                    app:strokeWidth="@dimen/dp_1_5"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
                 <View
                     android:id="@+id/v_line_left"
@@ -231,6 +237,9 @@
                 <soup.neumorphism.NeumorphCardView
                     android:id="@+id/cdView_facebook"
                     android:layout_width="wrap_content"
+
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_133"
                     android:layout_marginTop="@dimen/dp_20"
@@ -252,6 +261,9 @@
                     android:id="@+id/cdView_google"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     android:layout_marginTop="@dimen/dp_20"
                     android:layout_marginEnd="@dimen/dp_133"
                     app:layout_constraintEnd_toEndOf="parent"

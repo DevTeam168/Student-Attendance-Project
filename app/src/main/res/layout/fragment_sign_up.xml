@@ -37,7 +37,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="ContentDescription" />
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -47,6 +47,8 @@
                     android:layout_marginTop="66dp"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="@string/sign_up"
+                    android:textColorLink="@color/text_color_black"
+                    android:textColorHighlight="@color/text_color_black"
                     android:textColor="@color/text_color_black"
                     android:textSize="@dimen/sp_32"
                     app:layout_constraintStart_toStartOf="parent"
@@ -59,6 +61,8 @@
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginTop="@dimen/dp_5"
                     android:layout_marginEnd="@dimen/dp_16"
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -79,7 +83,8 @@
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
-                        android:theme="@style/CursorPointer"
+                        android:textColorLink="@color/text_color_black"
+                        android:textColorHighlight="@color/text_color_black"
                         android:textCursorDrawable="@drawable/cusor_color"
                         tools:ignore="Autofill" />
                 </soup.neumorphism.NeumorphCardView>
@@ -90,6 +95,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginEnd="@dimen/dp_16"
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_email"
@@ -105,11 +112,13 @@
                         android:fontFamily="@font/poppins_regular"
                         android:hint="@string/phone_number"
                         android:imeOptions="actionDone"
+                        android:textColorLink="@color/text_color_black"
+                        android:textColorHighlight="@color/text_color_black"
                         android:inputType="textPassword"
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
-                        tools:ignore="Autofill" />
+                        tools:ignore="Autofill,TextContrastCheck" />
                 </soup.neumorphism.NeumorphCardView>
 
                 <soup.neumorphism.NeumorphCardView
@@ -118,6 +127,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginEnd="@dimen/dp_16"
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_phone_number"
@@ -137,7 +148,7 @@
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
-                        tools:ignore="Autofill" />
+                        tools:ignore="Autofill,TextContrastCheck" />
 
                     <ImageView
                         android:id="@+id/imgView_eye_toggle"
@@ -155,6 +166,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginEnd="@dimen/dp_16"
+                    app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                    app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_password"
@@ -171,10 +184,12 @@
                         android:hint="@string/confirm_password"
                         android:imeOptions="actionDone"
                         android:inputType="textPassword"
+                        android:textColorHighlight="@color/text_color_black"
                         android:paddingHorizontal="@dimen/dp_16"
                         android:textColor="@color/text_color_black"
                         android:textSize="@dimen/sp_16"
-                        tools:ignore="Autofill" />
+                        android:textColorLink="@color/text_color_black"
+                        tools:ignore="Autofill,TextContrastCheck" />
 
                     <ImageView
                         android:id="@+id/iv_eye_toggle_confirm"
@@ -196,7 +211,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cdView_confirm_password"
                     app:strokeColor="@color/white"
-                    app:strokeWidth="@dimen/dp_1_5" />
+                    app:strokeWidth="@dimen/dp_1_5"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
@@ -207,13 +223,16 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
-            app:neumorph_backgroundColor="@color/light_grayish_blue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_backgroundColor="@color/light_grayish_blue"
+            app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+            app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
             app:neumorph_shadowElevation="@dimen/dp_1_5"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius5"
             app:neumorph_strokeColor="@color/white"
-            app:neumorph_strokeWidth="@dimen/dp_1_5">
+            app:neumorph_strokeWidth="@dimen/dp_1_5"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="28dp"
