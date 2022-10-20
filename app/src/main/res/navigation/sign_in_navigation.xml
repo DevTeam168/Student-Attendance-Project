@@ -41,6 +41,17 @@
             app:exitAnim="@android:anim/fade_out"
             android:id="@+id/action_otp_verification_fragment_to_forgot_password_fragment"
             app:destination="@id/forgot_password_fragment" />
+        <action
+            android:id="@+id/action_otp_verification_fragment_to_new_password_fragment"
+            app:destination="@id/new_password_fragment" />
+    </fragment>
+
+    <fragment android:id="@+id/new_password_fragment"
+        android:name="com.example.studentattendanceproject.fragment.newpassword.NewPasswordFragment">
+
+        <action
+            android:id="@+id/action_new_password_fragment_to_signin_fragment"
+            app:destination="@id/signin_fragment" />
     </fragment>
 
 </navigation>

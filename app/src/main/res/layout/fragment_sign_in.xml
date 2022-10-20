@@ -99,7 +99,6 @@
                 <soup.neumorphism.NeumorphCardView
                     android:id="@+id/cdView_password"
                     android:layout_width="0dp"
-
                     app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
                     app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     android:layout_height="@dimen/input_field_height"

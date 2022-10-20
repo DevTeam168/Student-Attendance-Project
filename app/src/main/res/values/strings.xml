@@ -25,4 +25,10 @@
     <string name="otp_verification">OTP Verification</string>
     <string name="_8">8</string>
     <string name="dont_get_otp_code">Don\'t get OTP Code?</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="at_least_8_characters">At least 8 characters</string>
+    <string name="must_less_than_25_characters">Must less than 25 characters</string>
+    <string name="contains_special_characters">Contains special characters ( @, $, %, #, *, ...)</string>
+    <string name="contains_lower_case_and_upper_case_letters">Contains lower case and upper case letters</string>
 </resources>
