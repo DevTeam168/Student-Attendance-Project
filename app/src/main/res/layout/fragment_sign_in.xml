@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:background="@color/light_grayish_blue">
 
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nstScroll_sign_in"
             android:layout_width="match_parent"
@@ -27,6 +28,8 @@
                 android:id="@+id/csl_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
                 android:background="@color/light_grayish_blue"
                 tools:context=".fragment.signinsiginup.SignInFragment">
 
@@ -241,7 +244,7 @@
                     app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_133"
-                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
                     app:layout_constraintEnd_toStartOf="@+id/cdView_google"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/v_line_right"
@@ -263,7 +266,7 @@
 
                     app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
                     app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
-                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_133"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cdView_facebook"
@@ -284,8 +287,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_10"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/text_color_black"
                     android:textColorLink="@color/pink"
