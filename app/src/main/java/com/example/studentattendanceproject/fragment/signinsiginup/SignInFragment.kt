@@ -55,7 +55,7 @@ class SignInFragment : Fragment() {
 
     @SuppressLint("ClickableViewAccessibility")
     private fun initListener() {
-        mBinding?.nstScrollSignIn?.setOnTouchListener { view, _ ->
+        mBinding?.cslContainer?.setOnTouchListener { view, motionEvent ->
             //hide keyboard layout
             Util.hideKeyboard(requireActivity(),view)
             //clear all focus from editText
