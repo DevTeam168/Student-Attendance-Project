@@ -68,9 +68,9 @@
                 <soup.neumorphism.NeumorphCardView
                     android:id="@+id/cdView_email"
                     android:layout_width="0dp"
+                    android:layout_height="@dimen/input_field_height"
                     app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
                     app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
-                    android:layout_height="@dimen/input_field_height"
                     android:layout_marginStart="@dimen/dp_16"
                     android:layout_marginTop="@dimen/dp_20"
                     android:layout_marginEnd="@dimen/dp_16"
