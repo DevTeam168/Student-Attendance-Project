@@ -31,4 +31,8 @@
     <string name="must_less_than_25_characters">Must less than 25 characters</string>
     <string name="contains_special_characters">Contains special characters ( @, $, %, #, *, ...)</string>
     <string name="contains_lower_case_and_upper_case_letters">Contains lower case and upper case letters</string>
+    <string name="home">Home</string>
+    <string name="attendance">Attendance</string>
+    <string name="report">Report</string>
+    <string name="profile">Profile</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.studentattendanceproject.fragment.signinsiginup
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -15,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.studentattendanceproject.MainActivity
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.databinding.FragmentSignInBinding
 import com.example.studentattendanceproject.util.Util
@@ -75,6 +77,11 @@ class SignInFragment : Fragment() {
 
         mBinding?.tvForgotPassword?.setOnClickListener {
             findNavController().navigate(R.id.action_signin_fragment_to_forgot_password_fragment)
+        }
+
+        mBinding?.btnSignIn?.setOnClickListener {
+            startActivity(Intent(requireContext(),MainActivity::class.java))
+            activity?.finish()
         }
     }
 

@@ -27,4 +27,9 @@
         <item name="neumorph_cornerSize">8dp</item>
     </style>
 
+    <style name="CustomShapeAppearanceRadius50">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">50dp</item>
+    </style>
+
 </resources>
