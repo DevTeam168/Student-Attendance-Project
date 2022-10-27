@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
-import com.example.studentattendanceproject.MainActivity
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.activity.SignInSignUpActivity
 import com.example.studentattendanceproject.databinding.SplashScreenActivityBinding

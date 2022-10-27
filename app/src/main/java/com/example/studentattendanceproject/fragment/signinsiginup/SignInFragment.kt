@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.studentattendanceproject.MainActivity
+import com.example.studentattendanceproject.activity.MainActivity
 import com.example.studentattendanceproject.R
 import com.example.studentattendanceproject.databinding.FragmentSignInBinding
 import com.example.studentattendanceproject.util.Util
@@ -80,7 +80,7 @@ class SignInFragment : Fragment() {
         }
 
         mBinding?.btnSignIn?.setOnClickListener {
-            startActivity(Intent(requireContext(),MainActivity::class.java))
+            startActivity(Intent(requireContext(), MainActivity::class.java))
             activity?.finish()
         }
     }

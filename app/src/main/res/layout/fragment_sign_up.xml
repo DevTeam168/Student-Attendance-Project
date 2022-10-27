@@ -228,7 +228,7 @@
             app:neumorph_backgroundColor="@color/light_grayish_blue"
             app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
             app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
-            app:neumorph_shadowElevation="@dimen/dp_1_5"
+            app:neumorph_shadowElevation="5dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius5"
             app:neumorph_strokeColor="@color/white"
             app:neumorph_strokeWidth="@dimen/dp_1_5"
