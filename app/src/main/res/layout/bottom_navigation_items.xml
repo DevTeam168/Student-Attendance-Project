@@ -50,7 +50,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <soup.neumorphism.NeumorphCardView
                         android:id="@+id/cdView_selected_bg_home"
@@ -78,7 +78,8 @@
                         android:textSize="@dimen/sp_10"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/img_home"
-                        app:layout_constraintStart_toStartOf="@+id/img_home" />
+                        app:layout_constraintStart_toStartOf="@+id/img_home"
+                        tools:ignore="TextContrastCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
