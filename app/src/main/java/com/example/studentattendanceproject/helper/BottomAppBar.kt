@@ -10,7 +10,7 @@ import com.example.studentattendanceproject.helper.Constants.BottomAppBarType.Co
 import com.example.studentattendanceproject.helper.Constants.BottomAppBarType.Companion.REPORT
 
 fun View.show(){this.visibility = View.VISIBLE}
-fun View.hide(){this.visibility = View.GONE}
+fun View.hide(){this.visibility = View.INVISIBLE}
 object BottomAppBar{
     fun selectedState(type:String,binding:ActivityMainBinding){
         when(type){
