@@ -2,9 +2,12 @@ package com.example.studentattendanceproject.helper
 
 object Constants{
     class BottomAppBarType{
-        val HOME = 0
-        val ATTENDANCE = 1
-        val REPORT = 2
-        val PROFILE = 3
+        companion object{
+            const val HOME = "home"
+            const val ATTENDANCE = "attendance"
+            const val REPORT = "report"
+            const val PROFILE = "profile"
+        }
+
     }
 }

@@ -82,6 +82,7 @@ class SignInFragment : Fragment() {
         mBinding?.btnSignIn?.setOnClickListener {
             startActivity(Intent(requireContext(), MainActivity::class.java))
             activity?.finish()
+
         }
     }
 
