@@ -28,6 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/monica"
@@ -66,5 +67,17 @@
                 app:srcCompat="@drawable/notification_bing" />
         </soup.neumorphism.NeumorphCardView>
 
+        <com.smarteist.autoimageslider.SliderView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="47dp"
+            android:orientation="horizontal"
+            app:sliderStartAutoCycle="false"
+            app:sliderIndicatorUnselectedColor="@color/indicator_unselected_color"
+            app:sliderIndicatorSelectedColor="@color/indicator_selected_color"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

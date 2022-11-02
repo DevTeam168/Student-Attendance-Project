@@ -32,4 +32,8 @@
         <item name="neumorph_cornerSize">50dp</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay_slider_image_corner">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>

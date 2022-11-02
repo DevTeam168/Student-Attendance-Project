@@ -10,7 +10,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:foregroundGravity="bottom"
         android:background="@color/light_grayish_blue">
+
+        <FrameLayout
+            android:id="@+id/main_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cdView_phone_number"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/cdView_phone_number"
