@@ -33,7 +33,7 @@
     </style>
 
     <style name="ShapeAppearanceOverlay_slider_image_corner">
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">80%</item>
     </style>
 
 </resources>
