@@ -13,22 +13,80 @@
         android:background="@color/light_grayish_blue"
         tools:context=".activity.MainActivity">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_header"
+            android:layout_width="0dp"
+            android:layout_height="88dp"
+            android:background="@drawable/white_shade_app_bar"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_welcome_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/welcome_back"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/monica"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/sp_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_welcome_back" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cd_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_backgroundColor="@color/light_grayish_blue"
+                app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+                app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
+                app:neumorph_shadowElevation="5dp"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius5"
+                app:neumorph_strokeColor="@color/white"
+                app:neumorph_strokeWidth="@dimen/dp_1_5"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/notification_bing" />
+            </soup.neumorphism.NeumorphCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <include
             android:id="@+id/bottom_nav_bar"
             layout="@layout/bottom_navigation_items"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:contentDescription="@string/todo"
-            android:elevation="1dp"
-            android:src="@drawable/white_shade_app_bar"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck" />
-
-
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/csl_header" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

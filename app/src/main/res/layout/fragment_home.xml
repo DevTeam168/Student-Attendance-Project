@@ -16,60 +16,6 @@
         android:background="@color/light_grayish_blue"
         tools:context=".fragment.home.HomeFragment">
 
-        <TextView
-            android:id="@+id/tv_welcome_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome_back"
-            android:textSize="@dimen/sp_12"
-            android:layout_marginTop="25dp"
-            android:textAlignment="textStart"
-            android:layout_marginStart="@dimen/dp_16"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/text_color_black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/monica"
-            android:textSize="@dimen/sp_24"
-            android:layout_marginStart="@dimen/dp_16"
-            android:fontFamily="@font/poppins_bold"
-            android:textColor="@color/text_color_black"
-            android:textAlignment="textStart"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_back"/>
-
-        <soup.neumorphism.NeumorphCardView
-            android:id="@+id/cd_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="@dimen/dp_16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:neumorph_backgroundColor="@color/light_grayish_blue"
-            app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
-            app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
-            app:neumorph_shadowElevation="5dp"
-            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRadius5"
-            app:neumorph_strokeColor="@color/white"
-            app:neumorph_strokeWidth="@dimen/dp_1_5"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_gravity="center"
-                android:padding="5dp"
-                app:srcCompat="@drawable/notification_bing" />
-        </soup.neumorphism.NeumorphCardView>
-
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/slider_view_image_slider"
             android:layout_width="match_parent"
@@ -82,10 +28,10 @@
             app:sliderIndicatorRadius="1.7dp"
             app:sliderScrollTimeInSec="3"
             app:sliderIndicatorGravity="bottom|center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
             app:sliderIndicatorUnselectedColor="@color/indicator_unselected_color"
             app:sliderIndicatorSelectedColor="@color/indicator_selected_color"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"/>
+            app:sliderAutoCycleDirection="right" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
             sliderViewImageSlider.setOffscreenPageLimit(1)
             sliderViewImageSlider.setSliderAdapter(adapter)
             sliderViewImageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM)
-            sliderViewImageSlider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
+            sliderViewImageSlider.setSliderTransformAnimation(SliderAnimations.ZOOMOUTTRANSFORMATION)
             sliderViewImageSlider.startAutoCycle()
         }
     }
