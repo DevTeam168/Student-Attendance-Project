@@ -33,6 +33,38 @@
             app:sliderIndicatorSelectedColor="@color/indicator_selected_color"
             app:sliderAutoCycleDirection="right" />
 
+        <TextView
+            android:id="@+id/tv_today_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/sp_16"
+            android:text="@string/today_schedule"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_16"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/text_color_black"
+            app:layout_constraintTop_toBottomOf="@+id/slider_view_image_slider"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_schedule">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_today_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/today_schedule_items" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
