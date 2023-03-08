@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,13 +10,39 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="27dp"
         android:background="@color/light_grayish_blue"
         tools:context=".fragment.attendance.AttendanceFragment">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/attendance" />
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cdView_email"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_field_height"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_shadowColorDark="@color/design_default_color_shadow_dark"
+            app:neumorph_shadowColorLight="@color/design_default_color_shadow_light"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_strokeColor="@color/white"
+            app:neumorph_strokeWidth="@dimen/dp_1_5">
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="Autofill,TextContrastCheck" />
+        </soup.neumorphism.NeumorphCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
